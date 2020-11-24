@@ -11,7 +11,6 @@ import static java.lang.System.out;
 
 /**
  * @author Radoslav Husar
- * @version April 2016
  */
 public class NetworkInterfacesInspector {
 
@@ -19,7 +18,7 @@ public class NetworkInterfacesInspector {
         System.setProperty("java.net.preferIPv4Stack", "true");
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             Enumeration<NetworkInterface> ifaces = NetworkInterface.getNetworkInterfaces();
             for (NetworkInterface iface : Collections.list(ifaces)) {
@@ -29,6 +28,11 @@ public class NetworkInterfacesInspector {
                     out.println("InetAddress: " + addr);
                 }
                 out.println("MTU: " + iface.getMTU());
+                out.println("Loopback?: " + iface.isLoopback());
+                out.println("Up?: " + iface.isUp());
+                out.println("PointToPoint?: " + iface.isPointToPoint());
+                out.println("Virtual?: " + iface.isVirtual());
+                out.println("Multicast?: " + iface.supportsMulticast());
                 out.println();
             }
         } catch (SocketException e) {

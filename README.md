@@ -7,11 +7,6 @@ Usage:
 
         mvn compile exec:java
 
-or
-
-        mvn compile exec:java -Djava.net.preferIPv4Stack=true
-        
-
 Example output:
 
         Display name: utun0
