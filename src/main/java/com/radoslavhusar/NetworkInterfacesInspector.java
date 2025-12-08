@@ -14,10 +14,6 @@ import static java.lang.System.out;
  */
 public class NetworkInterfacesInspector {
 
-    static {
-        System.setProperty("java.net.preferIPv4Stack", "true");
-    }
-
     public static void main(String[] args) {
         try {
             Enumeration<NetworkInterface> ifaces = NetworkInterface.getNetworkInterfaces();
