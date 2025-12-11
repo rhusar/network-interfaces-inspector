@@ -1,0 +1,284 @@
+:toc:
+
+= Network Interfaces Inspector
+
+Prints out basic information about all interfaces, especially to find out the interfaces' MTUs.
+
+Usage:
+
+[source,shell]
+----
+./mvnw compile exec:java
+----
+
+== Interfaces on GitHub Actions Runners
+
+The following is the output of the tool when run on GitHub Runners as of December 2025.
+
+=== `ubuntu-latest` Runner
+
+----
+Display name: docker0
+Name: docker0
+InetAddress: /172.17.0.1
+MTU: 1500
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: eth0
+Name: eth0
+InetAddress: /fe80:0:0:0:7e1e:52ff:fe40:ff4d%eth0
+InetAddress: /10.1.0.183
+MTU: 1500
+Loopback?: false
+Up?: true
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: lo
+Name: lo
+InetAddress: /0:0:0:0:0:0:0:1%lo
+InetAddress: /127.0.0.1
+MTU: 65536
+Loopback?: true
+Up?: true
+PointToPoint?: false
+Virtual?: false
+Multicast?: false
+----
+
+=== `windows-latest` Runner
+
+----
+Display name: Software Loopback Interface 1
+Name: lo
+InetAddress: /127.0.0.1
+InetAddress: /0:0:0:0:0:0:0:1
+MTU: -1
+Loopback?: true
+Up?: true
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft 6to4 Adapter
+Name: net0
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft IP-HTTPS Platform Adapter
+Name: net1
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft Hyper-V Network Adapter
+Name: eth0
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft Hyper-V Network Adapter #2
+Name: eth1
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Hyper-V Virtual Switch Extension Adapter
+Name: eth2
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft Teredo Tunneling Adapter
+Name: net2
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft Kernel Debug Network Adapter
+Name: eth3
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000
+Name: eth4
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Hyper-V Virtual Ethernet Adapter
+Name: eth5
+InetAddress: /172.23.208.1
+InetAddress: /fe80:0:0:0:104a:141d:d6ee:89f3%eth5
+MTU: 1500
+Loopback?: false
+Up?: true
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000
+Name: eth6
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000
+Name: eth7
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+Name: eth8
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft Hyper-V Network Adapter #3
+Name: eth9
+InetAddress: /10.1.0.101
+InetAddress: /fe80:0:0:0:4387:db3e:a42f:f978%eth9
+MTU: 1500
+Loopback?: false
+Up?: true
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft Hyper-V Network Adapter #3-WFP Native MAC Layer LightWeight Filter-0000
+Name: eth10
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft Hyper-V Network Adapter #3-QoS Packet Scheduler-0000
+Name: eth11
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: Microsoft Hyper-V Network Adapter #3-WFP 802.3 MAC Layer LightWeight Filter-0000
+Name: eth12
+MTU: -1
+Loopback?: false
+Up?: false
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+----
+
+=== `macos-latest` Runner
+
+----
+Display name: utun3
+Name: utun3
+InetAddress: /fe80:0:0:0:ce81:b1c:bd2c:69e%utun3
+MTU: 1000
+Loopback?: false
+Up?: true
+PointToPoint?: true
+Virtual?: false
+Multicast?: true
+
+Display name: utun2
+Name: utun2
+InetAddress: /fe80:0:0:0:f97b:4b2:5d31:79e5%utun2
+MTU: 2000
+Loopback?: false
+Up?: true
+PointToPoint?: true
+Virtual?: false
+Multicast?: true
+
+Display name: utun1
+Name: utun1
+InetAddress: /fe80:0:0:0:8393:8114:658b:50c7%utun1
+MTU: 1380
+Loopback?: false
+Up?: true
+PointToPoint?: true
+Virtual?: false
+Multicast?: true
+
+Display name: utun0
+Name: utun0
+InetAddress: /fe80:0:0:0:312c:e274:b7dd:8971%utun0
+MTU: 1500
+Loopback?: false
+Up?: true
+PointToPoint?: true
+Virtual?: false
+Multicast?: true
+
+Display name: en0
+Name: en0
+InetAddress: /fe80:0:0:0:cad:83a2:f7c9:fd55%en0
+InetAddress: /192.168.64.25
+MTU: 1500
+Loopback?: false
+Up?: true
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+
+Display name: lo0
+Name: lo0
+InetAddress: /fe80:0:0:0:0:0:0:1%lo0
+InetAddress: /0:0:0:0:0:0:0:1%lo0
+InetAddress: /127.0.0.1
+MTU: 16384
+Loopback?: true
+Up?: true
+PointToPoint?: false
+Virtual?: false
+Multicast?: true
+----
+
+Enjoy.

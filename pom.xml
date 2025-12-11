@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.radoslavhusar</groupId>
+    <groupId>io.github.rhusar.network-interfaces-inspector</groupId>
     <artifactId>network-interfaces-inspector</artifactId>
     <version>1.0.0.Final-SNAPSHOT</version>
 
@@ -15,7 +15,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.4.0</version>
                 <configuration>
-                    <mainClass>com.radoslavhusar.NetworkInterfacesInspector</mainClass>
+                    <mainClass>io.github.rhusar.network_interfaces_inspector.NetworkInterfacesInspector</mainClass>
                 </configuration>
             </plugin>
             <plugin>

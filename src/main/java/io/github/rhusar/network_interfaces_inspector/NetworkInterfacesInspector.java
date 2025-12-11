@@ -1,4 +1,4 @@
-package com.radoslavhusar;
+package io.github.rhusar.network_interfaces_inspector;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
