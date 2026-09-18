@@ -11,6 +11,17 @@ Usage:
 ./mvnw compile exec:java
 ----
 
+From outside the repository with a temporary checkout:
+
+[source,shell]
+----
+cd $(mktemp -d) && \
+git clone https://github.com/rhusar/network-interfaces-inspector.git && \
+cd network-interfaces-inspector && \
+clear && \
+./mvnw -q compile exec:java
+----
+
 == Interfaces on GitHub Actions Runners
 
 The following is the output of the tool when run on GitHub Runners as of December 2025.
